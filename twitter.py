@@ -11,7 +11,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 user = api.me();
 
 searchKey = 'UPenn'
-numTweets = 1
+numTweets = 5
 
 for tweet in tweepy.Cursor(api.search, searchKey).items(numTweets):
     try: 
