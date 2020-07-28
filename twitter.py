@@ -16,7 +16,8 @@ numTweets = 5
 for tweet in tweepy.Cursor(api.search, searchKey).items(numTweets):
     try: 
         print('Tweet Liked')
-        tweet.favorite()
+        tweet.favorite()  #Favorites are now known as likes
+      #  tweet.retweet()
         time.sleep(10) # Creates a time gap between posts
     except tweepy.TweepError as err: 
         print(err.reason)
